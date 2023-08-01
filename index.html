@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div class="d-flex p-5 g-5 bg-danger">
+        <div class="card mx-4 p-5 text-center">
+          <img  id="firstwin" width="200" src="./images/first-player.webp" alt="" />
+          <!-- <img id="firstlose" width="200" src="./images/compyuter-player (1).webp" alt="" class="d-none"> -->
+
+          <div class="card-body">
+            <h5 class="card-title">First Player</h5>
+            <p class="card-text text-success h2" id="playerFirstTitle">Ready?</p>
+            <p class="card-text h4" id="playerFirstScore">Score:0</p>
+          </div>
+          <img
+            width="200"
+            src="./images/e.jpg"
+            alt="pokemon"
+            id="playerFirstPokemon"
+          />
+        </div>
+        <div  style="display: flex;
+        flex-direction: column; align-items: center; justify-content: center;" class="display-5  ">
+<!-- <h2>VS</h2> -->
+<button id="btnstart" style=" cursor: pointer;  border-radius: 20px; background-color: green; "  class=" border-0 ">Start</button>
+ <div id="informationtext" class="w-50 bg-white p-2 mt-3 d-none">
+<p  style="font-size: 20px;
+font-weight: bold; color: red;">For start please enter only this letters: <br>
+  1. "e"<br>
+  2. "w"<br>
+  3. "f"
+</p>
+</div>
+        </div>
+        <div class="card mx-4 p-5 text-center">
+          <img width="200" src="./images/compyuter-player (1).webp" alt="" />
+          <div class="card-body">
+            <h5 class="card-title ">Compyuter Player</h5>
+            <p class="card-text text-danger h2" id="playerSecondTitle">Ready?</p>
+            <p class="card-text h4" id="playerSecondScore">Score:0</p>
+          </div>
+          <img
+            width="200"
+            src="./images/w.jpg"
+            alt="pokemon"
+            id="playerSecondPokemon"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Utils -->
+    <script src="./utils/random.js"></script>
+
+    <!-- General -->
+    <script src="./main.js"></script>
+  </body>
+</html>
