@@ -17,25 +17,13 @@ const pokemons = ["e", "w", "f"];
 let player1Score = 0;
 let player2Score = 0;
 
-// let dubbleKey = "ctrl p"
 let isRemoteControl = false;
-window.onkeydown = startGame;
 
 btnstart.addEventListener("click",function(){
-  informationtext.setAttribute("class","display-block bg-white")  
+  informationtext.setAttribute("class","display-block  rounded text-center bg-white")  
 
-
-
-  
+  window.onkeydown = startGame;
 })
-
-
-
-
-
-
-
-
 
 // console.log(randomElement);
 
@@ -68,7 +56,7 @@ function isdraw(isdraw){
 
   playerFirstTitle.classList.add(`${isdraw ? "text-primary" : "text-primary"}`);
 
-  //second
+  second
   playerSecondTitle.classList.remove(
     `${ isdraw? "text-danger" : "text-success"}`
   );
@@ -76,17 +64,7 @@ function isdraw(isdraw){
   playerSecondTitle.classList.add(
     `${isdraw ? "text-primary" : "text-primary"}`
   );
-
-  
 }
-
-
-
-
-
-
-
-
 
 function showPokemon(item1,item2) {
   playerFirstScore.innerText = `Score: ${player1Score}`;
@@ -97,13 +75,8 @@ function showPokemon(item1,item2) {
 }
 
 function startGame(e) {
-
-
   if (isRemoteControl) return;
-
   const firstPlayerChoose = e.key;
-
-  // dubbleKey += firstPlayerChoose + " "
 
   if (!pokemons.includes(firstPlayerChoose)) {
     alert("Please press correct key: 'e,w,f'");
@@ -142,12 +115,6 @@ isdraw()
     console.log("COMP WIN");
     player2Score += 1;
     isWin();
-    // var imgSrc=firstwin.getAttribute("src")
-
-// firstwin.setAttribute("class","display- none")
-//     firstlose.setAttribute("class","display- block")
-    // firstwin.setAttribute("src","./images/compyuter-player (1).webp")
-    // firstlose.style.display="block " 
     showPokemon(firstPlayerChoose, compPlayerChoose);
   }
 
@@ -156,6 +123,4 @@ isdraw()
 }
 
 
-// window.navigator.getBattery().then((data) => {
-//   console.log(data);
-// });
+
